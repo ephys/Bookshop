@@ -1,0 +1,37 @@
+ErrorDocument 404 /rewriting.php
+ErrorDocument 403 /rewriting.php
+AddDefaultCharset UTF-8
+Options -Indexes
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "now"
+	<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav|swf|woff)$">
+		ExpiresDefault "access plus 1 month"
+	</FilesMatch>
+	<FilesMatch "\.(gif|jpg|jpeg|png|js|css)$">
+		ExpiresDefault "access plus 1 week"
+	</FilesMatch>
+	<FilesMatch "\.(xml|xsl|html|htm|txt)$">
+		ExpiresDefault "access plus 1 hour"
+	</FilesMatch>
+	<FilesMatch "\.(php|cgi|pl)$">
+		ExpiresActive Off
+	</FilesMatch>
+</IfModule>
+ 
+<IfModule mod_headers.c>
+	<FilesMatch "\\.(ico|jpe?g|png|gif|swf|css|gz|woff)$">
+		Header set Cache-Control "max-age=31536000, public"
+	</FilesMatch>
+	<FilesMatch "\\.(js)$">
+		Header set Cache-Control "max-age=31536000, private"
+	</FilesMatch>
+	<filesMatch "\\.(html|htm)$">
+		Header set Cache-Control "max-age=7200, public"
+	</filesMatch>
+	# Disable caching for scripts and other dynamic files
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>

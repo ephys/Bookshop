@@ -1,0 +1,9 @@
+ErrorDocument 404 http://bookshop.fr.nf/api
+ErrorDocument 403 http://bookshop.fr.nf/api
+AddDefaultCharset UTF-8
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^api.php$ public.php
+RewriteRule ^upload.php$ private.php

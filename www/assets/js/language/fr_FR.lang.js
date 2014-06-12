@@ -1,0 +1,14 @@
+_LANGUAGE = [];
+_LANGUAGE['GALLERY_LASTEST'] = 'Plus récents';
+_LANGUAGE['GALLERY_BESTVOTES'] = 'Meilleures notes';
+_LANGUAGE['GALLERY_RANDOM'] = 'Aléatoire';
+_LANGUAGE['BOOK_LOAD_PREVIEW'] = 'Preview';
+_LANGUAGE['BOOK_LOAD'] = 'Afficher';
+_LANGUAGE['PROFILE_EMPTY'] = 'Ce membre n\'est pas enregistré';
+_LANGUAGE['HELP_DL_BUTTON'] = 'En utilisant cette commande dans minecraft, vous importerez direcrement le livre.<br/>Pour cela, il faut télécharger le mod Bookshop en cliquant sur ce bouton.';
+_LANGUAGE['COPY'] = 'Copier';
+_LANGUAGE['COPIED'] = 'Copié';
+_LANGUAGE['BOOK_UNTITLED'] = 'Sans titre';
+_LANGUAGE['MENU_GALLERY'] = 'Galerie';
+_LANGUAGE['BOOK_TITLE'] = 'Titre';
+_LANGUAGE['BOOK_AUTHOR'] = 'Auteur';
